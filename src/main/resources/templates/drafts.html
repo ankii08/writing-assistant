@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Saved Drafts</title>
+</head>
+<body>
+<h1>Your Drafts</h1>
+<ul>
+    <li th:each="draft : ${drafts}">
+        <p><strong th:text="${draft.title}">Title</strong></p>
+        <p th:text="${draft.content}">Content</p>
+    </li>
+</ul>
+<a href="/editor">Back to Editor</a>
+</body>
+</html>
